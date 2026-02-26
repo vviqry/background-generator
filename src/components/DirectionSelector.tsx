@@ -20,7 +20,7 @@ interface DirectionSelectorProps {
 function DirectionSelector({ direction, onChange }: DirectionSelectorProps) {
   return (
     <div className="space-y-3">
-      <label className="block text-sm font-medium text-gray-500">Direction</label>
+      <label className="block text-sm font-medium text-sky-200/60">Direction</label>
       <div className="grid grid-cols-4 gap-2 sm:grid-cols-8">
         {directions.map((dir) => {
           const isActive = direction === dir.value;
@@ -33,8 +33,8 @@ function DirectionSelector({ direction, onChange }: DirectionSelectorProps) {
               whileTap={{ scale: 0.92 }}
               className={`flex h-11 w-full cursor-pointer items-center justify-center rounded-lg border text-lg transition-colors ${
                 isActive
-                  ? 'border-indigo-500 bg-indigo-50 text-indigo-600 shadow-sm'
-                  : 'border-gray-200 bg-white text-gray-500 hover:border-gray-300 hover:bg-gray-50'
+                  ? 'border-sky-400 bg-sky-400/15 text-sky-300 shadow-sm shadow-sky-400/20'
+                  : 'border-white/10 bg-white/5 text-white/50 hover:border-white/20 hover:bg-white/10 hover:text-white/70'
               }`}
               title={dir.label}
             >

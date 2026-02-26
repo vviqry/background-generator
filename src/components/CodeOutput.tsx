@@ -28,15 +28,15 @@ function CodeOutput({ cssCode }: CodeOutputProps) {
 
   return (
     <div className="space-y-3">
-      <label className="block text-sm font-medium text-gray-500">CSS Code</label>
-      <div className="relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900">
+      <label className="block text-sm font-medium text-sky-200/60">CSS Code</label>
+      <div className="relative overflow-hidden rounded-xl border border-white/10 bg-black/40">
         {/* Code display */}
         <pre className="overflow-x-auto px-5 py-4 text-sm leading-relaxed">
-          <code className="font-mono text-green-400">{cssCode}</code>
+          <code className="font-mono text-emerald-400">{cssCode}</code>
         </pre>
 
         {/* Copy button */}
-        <div className="flex items-center justify-end border-t border-gray-700/50 px-4 py-2.5">
+        <div className="flex items-center justify-end border-t border-white/5 px-4 py-2.5">
           <motion.button
             type="button"
             onClick={handleCopy}
@@ -44,8 +44,8 @@ function CodeOutput({ cssCode }: CodeOutputProps) {
             whileTap={{ scale: 0.95 }}
             className={`flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
               copied
-                ? 'bg-green-500/20 text-green-400'
-                : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700 hover:text-white'
+                ? 'bg-emerald-500/20 text-emerald-400'
+                : 'bg-white/5 text-sky-200/70 hover:bg-white/10 hover:text-white'
             }`}
           >
             <AnimatePresence mode="wait">
